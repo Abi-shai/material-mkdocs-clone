@@ -1,7 +1,11 @@
 .nav-wrapper {
-  width: 99%;
-  margin: 0 auto;
+  width: 60%;
+  // margin: 0 auto;
   margin-top: 1.3em;
+
+  @media screen and (max-width: 900px) {
+    display: none;
+  }
 
   .list-wrapper {
     display: flex;

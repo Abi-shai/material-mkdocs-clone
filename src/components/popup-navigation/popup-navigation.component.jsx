@@ -74,11 +74,6 @@ const PopupNavigation = () => {
 
                 </div>
               </div>
-
-              <div className="info-popup-wrapper-2">
-                <p className="info-popup-text">Go to repository</p>
-              </div>
-
             </div>
           </div>
         </label>
