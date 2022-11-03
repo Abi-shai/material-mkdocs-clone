@@ -25,117 +25,119 @@ const PopupNavigation = () => {
           : { transform: 'translateX(-250px)' }
       }
     >
-      <label className="ham-menu__nav__title">
-        <div className="ham-menu__nav__logo">
-          <div className="ham-menu__nav__logo__element">
-            <img
-              className="mt-icon__overlay"
-              src={MaterialIcon}
-              alt="menu"
-            />
-            <p>Material for MkDocs</p>
-          </div>
-          <div className="links-wrapper-4">
-            <div
-              className="links-wrapper-3"
-            >
-              <Git className="git" fill="white" />
+      <div className="ham-menu__nav-2">
+        <label className="ham-menu__nav__title">
+          <div className="ham-menu__nav__logo">
+            <div className="ham-menu__nav__logo__element">
+              <img
+                className="mt-icon__overlay"
+                src={MaterialIcon}
+                alt="menu"
+              />
+              <p>Material for MkDocs</p>
+            </div>
+            <div className="links-wrapper-4">
+              <div
+                className="links-wrapper-3"
+              >
+                <Git className="git" fill="white" />
 
-              <div className="links">
-                <p> squidfunk /mkdocs-material</p>
+                <div className="links">
+                  <p> squidfunk /mkdocs-material</p>
 
-                <div className="links-icons-wrapper">
-                  <div className="links-icons">
-                    <div className="icon-stats">
-                      <Badge
-                        className="links-icon"
-                        fill="white"
-                      />
-                      <span>8.5.7</span>
+                  <div className="links-icons-wrapper">
+                    <div className="links-icons">
+                      <div className="icon-stats">
+                        <Badge
+                          className="links-icon"
+                          fill="white"
+                        />
+                        <span>8.5.7</span>
+                      </div>
+                      <div className="icon-stats">
+                        <Star
+                          className="links-icon"
+                          fill="white"
+                        />
+                        <span>11.5k</span>
+                      </div>
+                      <div className="icon-stats">
+                        <GitRepo
+                          className="links-icon"
+                          fill="white"
+                        />
+                        <span>2.6k</span>
+                      </div>
                     </div>
-                    <div className="icon-stats">
-                      <Star
-                        className="links-icon"
-                        fill="white"
-                      />
-                      <span>11.5k</span>
-                    </div>
-                    <div className="icon-stats">
-                      <GitRepo
-                        className="links-icon"
-                        fill="white"
-                      />
-                      <span>2.6k</span>
-                    </div>
+
                   </div>
 
                 </div>
-
               </div>
-            </div>
 
-            <div className="info-popup-wrapper-2">
-              <p className="info-popup-text">Go to repository</p>
-            </div>
+              <div className="info-popup-wrapper-2">
+                <p className="info-popup-text">Go to repository</p>
+              </div>
 
+            </div>
           </div>
-        </div>
-      </label>
-      <ul
-        className="nav-ul"
-      >
-        <li className="nav-ul__link nav-ul__li">
-          <span>Home</span>
-        </li>
-        <li className="nav-ul__li linkss">
-          <span>
-            Getting started
-          </span>
-          <span className="nav-li-arrow">
-            &#x203A;
-          </span>
-        </li>
-        <li className="nav-ul__li linkss">
-          <span>
-            Setup
-          </span>
-          <span className="nav-li-arrow">
-            &#x203A;
-          </span>
-        </li>
-        <li className="nav-ul__li linkss">
-          <span>
-            Reference
-          </span>
-          <span className="nav-li-arrow">
-            &#x203A;
-          </span>
-        </li>
-        <li className="nav-ul__li linkss">
-          <span>
-            Insiders
-          </span>
-          <span className="nav-li-arrow">
-            &#x203A;
-          </span>
-        </li>
-        <li className="nav-ul__li linkss">
-          <span>
-            Blog
-          </span>
-          <span className="nav-li-arrow">
-            &#x203A;
-          </span>
-        </li>
-        <li className="nav-ul__li linkss">
-          <span>
-            Getting started
-          </span>
-          <span className="nav-li-arrow">
-            &#x203A;
-          </span>
-        </li>
-      </ul>
+        </label>
+        <ul
+          className="nav-ul"
+        >
+          <li className="nav-ul__link nav-ul__li">
+            <span>Home</span>
+          </li>
+          <li className="nav-ul__li linkss">
+            <span>
+              Getting started
+            </span>
+            <span className="nav-li-arrow">
+              &#x203A;
+            </span>
+          </li>
+          <li className="nav-ul__li linkss">
+            <span>
+              Setup
+            </span>
+            <span className="nav-li-arrow">
+              &#x203A;
+            </span>
+          </li>
+          <li className="nav-ul__li linkss">
+            <span>
+              Reference
+            </span>
+            <span className="nav-li-arrow">
+              &#x203A;
+            </span>
+          </li>
+          <li className="nav-ul__li linkss">
+            <span>
+              Insiders
+            </span>
+            <span className="nav-li-arrow">
+              &#x203A;
+            </span>
+          </li>
+          <li className="nav-ul__li linkss">
+            <span>
+              Blog
+            </span>
+            <span className="nav-li-arrow">
+              &#x203A;
+            </span>
+          </li>
+          <li className="nav-ul__li linkss">
+            <span>
+              Getting started
+            </span>
+            <span className="nav-li-arrow">
+              &#x203A;
+            </span>
+          </li>
+        </ul>
+      </div>
     </nav>
   )
 };

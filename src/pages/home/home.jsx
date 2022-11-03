@@ -30,7 +30,14 @@ const Home = () => {
   }
 
   return (
-    <div className="home">
+    <div
+      className="home"
+      style={
+        isMenuButtonClicked === true
+          ? { height: "100vh" }
+          : { height: "100%" }
+      }
+    >
       <div className="hd-wrapper">
         <Header />
       </div>
