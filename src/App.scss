@@ -1,0 +1,34 @@
+$base-animation: all 1000ms cubic-bezier(.1, .7, .1, 1);
+$second-animation: all 100ms ease-in-out;
+$md-primary-color: #fff;
+$md-primary-fg-color: #104b75;
+$md-accent-color-no-hovered: #526cfe;
+$md-accent-color-hovered: #3646a0;
+
+
+
+html,
+body {
+  background-color: $md-primary-fg-color;
+}
+
+#app {
+  overflow: hidden;
+}
+
+// Global
+.icon-24 {
+  height: 28px;
+  width: 28px;
+  justify-self: center;
+  color: red;
+  transition: all 500ms ease-in-out;
+}
+
+.icon-24:hover {
+  transition: all 500ms ease-in-out;
+}
+
+a {
+  text-decoration: none;
+}

@@ -1,0 +1,186 @@
+@import '../../App.scss';
+
+.ham-menu__nav {
+  bottom: 0;
+  left: 0;
+  margin: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  scroll-snap-type: none;
+  top: 0;
+  background-color: white;
+  height: 100vh;
+  scroll-snap-type: none;
+  width: 250px;
+  z-index: 5;
+  transform: translateX(-250px);
+
+  &__logo {
+    background-color: #3e51bb;
+
+    &__element {
+      width: 80%;
+      margin: 0 auto;
+      padding: 1em 0em;
+      font-size: 17px;
+      color: white;
+      font-weight: 700;
+
+      & p {
+        padding-top: .5em;
+      }
+    }
+  }
+}
+
+.mt-icon__overlay {
+  width: 60px;
+  height: 60px;
+}
+
+.links {
+  display: grid;
+  grid-template-rows: 95% 5%;
+  row-gap: 5px;
+  font-size: 13px;
+  text-align: left;
+  height: fit-content;
+}
+
+.links-wrapper-4 {
+  position: relative;
+  transition: $base-animation;
+  background-color: $md-accent-color-hovered;
+
+  // &:hover {
+  //   .info-popup-wrapper {
+  //     opacity: 1;
+  //     transition: $base-animation;
+  //   }
+  // }
+}
+
+.links-wrapper-3 {
+  display: flex;
+  align-content: center;
+  text-align: center;
+  justify-content: center;
+  gap: .5em;
+  cursor: pointer;
+  color: white;
+  opacity: 1;
+  width: 80%;
+  transform: translateX(-13px);
+  margin: 0 auto;
+  padding-bottom: .5em;
+  padding-top: .5em;
+  transition: $second-animation;
+
+  &:hover {
+    opacity: .7;
+    transition: $second-animation;
+  }
+}
+
+
+.git {
+  height: 100%;
+  width: 20px;
+  transform: translateY(10px);
+}
+
+.links-icons {
+  width: calc(100% - 1em);
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-start;
+  transform: translateX(-10px);
+  gap: 10px;
+  font-size: 10px;
+}
+
+.links-icon {
+  height: 16px;
+  width: 16px;
+  gap: 10px;
+}
+
+.icon-stats {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+
+.info-popup-wrapper-2 {
+  position: absolute;
+  top: 110%;
+  right: 0;
+  left: 0;
+  background-color: white;
+  width: 40%;
+  margin: 0 auto;
+  padding: .25em 0em;
+  margin-top: .8em;
+  border-radius: 2px;
+  opacity: 0;
+  transition: $base-animation;
+  pointer-events: none;
+  z-index: 99999;
+}
+
+.info-popup-text {
+  text-align: center;
+  color: black;
+  font-size: 12px;
+}
+
+.nav-ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+  list-style: none;
+  padding-top: .5em;
+  padding-left: 1.25em;
+
+  &:nth-child(1) {
+    color: red;
+  }
+
+  &__link {
+    position: relative;
+    cursor: pointer;
+    color: $md-accent-color-no-hovered;
+  }
+
+  .linkss {
+    position: relative;
+    cursor: pointer;
+
+    &:hover {
+      color: $md-accent-color-hovered;
+    }
+  }
+
+  &__li::after {
+    content: "";
+    position: absolute;
+    top: 150%;
+    right: 0;
+    left: 0;
+    width: 400px;
+    height: .5px;
+    background-color: grey;
+    opacity: .2;
+    transform: translateX(-25px);
+  }
+
+  .nav-li-arrow {
+    float: right;
+    transform: translateX(-8px);
+    width: 24px;
+    height: 24px;
+  }
+}

@@ -1,0 +1,19 @@
+.nav-wrapper {
+  width: 99%;
+  margin: 0 auto;
+  margin-top: 1.3em;
+
+  .list-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5em;
+    list-style-type: none;
+    font-size: 14px;
+    color: white;
+
+    .li-element {
+      opacity: .8;
+      cursor: pointer;
+    }
+  }
+}

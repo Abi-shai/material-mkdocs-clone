@@ -1,0 +1,95 @@
+@import '../../App.scss';
+
+.maticon-wrapper {
+  transition: $second-animation;
+  opacity: 1;
+
+  &:hover {
+    opacity: .7;
+    transition: $second-animation;
+  }
+
+  &:hover~.info-popup-wrapper {
+    @media screen and (min-width: 900px) {
+      opacity: 1;
+      transition: $second-animation;
+    }
+  }
+}
+
+.maticon {
+  height: 28px;
+  width: 28px;
+  transform: translateY(5px);
+  opacity: 1;
+  transition: $second-animation;
+}
+
+.ham-menu {
+  display: grid;
+  grid-template-columns: 10% 90%;
+  align-items: center;
+  text-align: center;
+  justify-items: flex-start;
+  font-size: 18px;
+  // position: relative;
+  gap: 1em;
+  transform: translateY(3px);
+
+  @media screen and (max-width: 900px) {
+    transform: translateY(6px);
+
+    .material-text {
+      text-overflow: ellipsis;
+    }
+  }
+
+  .material-text {
+    text-align: center;
+    height: 20px;
+    font-weight: 600;
+    color: $md-primary-color;
+  }
+
+  .info-popup-wrapper {
+    position: absolute;
+    top: 110%;
+    right: 0;
+    left: 0;
+    background-color: white;
+    width: 120px;
+    margin: 0 auto;
+    padding: .25em 0em;
+    margin-top: .8em;
+    border-radius: 2px;
+    opacity: 0;
+    transition: $base-animation;
+    pointer-events: none;
+    transform: translateX(-160px);
+
+    .info-popup-text {
+      text-align: center;
+      color: black;
+      font-size: 12px;
+    }
+  }
+}
+
+.icon-image {
+  fill: white;
+  display: none;
+  transform: translateY(2px);
+  height: 35px;
+  width: 35px;
+  cursor: pointer;
+
+  @media screen and (max-width: 900px) {
+    display: block;
+  }
+}
+
+.icon-image-1 {
+  @media screen and (max-width: 900px) {
+    display: none;
+  }
+}

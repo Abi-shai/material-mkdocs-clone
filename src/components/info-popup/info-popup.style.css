@@ -1,0 +1,13 @@
+.info-popup-wrapper {
+  position: absolute;
+  top: 110%;
+  right: 0;
+  left: 0;
+  background-color: white;
+  padding: .25em .5em;
+}
+
+.info-popup-text {
+  text-align: center;
+  color: black;
+}

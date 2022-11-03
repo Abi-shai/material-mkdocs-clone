@@ -1,0 +1,97 @@
+@import '../../App.scss';
+
+.links {
+  display: grid;
+  grid-template-rows: 95% 5%;
+  row-gap: 5px;
+  font-size: 13px;
+  text-align: left;
+  height: fit-content;
+}
+
+.links-wrapper {
+  position: relative;
+  transition: $base-animation;
+
+  &:hover {
+    .info-popup-wrapper {
+      opacity: 1;
+      transition: $base-animation;
+    }
+  }
+
+  @media screen and (max-width: 900px) {
+    display: none;
+  }
+}
+
+.links-wrapper-2 {
+  display: flex;
+  align-content: center;
+  text-align: center;
+  justify-content: center;
+  gap: .5em;
+  cursor: pointer;
+  color: white;
+  opacity: 1;
+  transition: $second-animation;
+
+  &:hover {
+    opacity: .7;
+    transition: $second-animation;
+  }
+}
+
+
+.git {
+  height: 100%;
+  width: 20px;
+  transform: translateY(10px);
+}
+
+.links-icons {
+  width: calc(100% - 1em);
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-start;
+  transform: translateX(-10px);
+  gap: 10px;
+  font-size: 10px;
+}
+
+.links-icon {
+  height: 16px;
+  width: 16px;
+  gap: 10px;
+}
+
+.icon-stats {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+
+.info-popup-wrapper {
+  position: absolute;
+  top: 110%;
+  right: 0;
+  left: 0;
+  background-color: white;
+  width: 40%;
+  margin: 0 auto;
+  padding: .25em 0em;
+  margin-top: .8em;
+  border-radius: 2px;
+  opacity: 0;
+  transition: $base-animation;
+  pointer-events: none;
+  z-index: 99999;
+}
+
+.info-popup-text {
+  text-align: center;
+  color: black;
+  font-size: 12px;
+}
