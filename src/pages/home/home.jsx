@@ -1,8 +1,7 @@
-import { Parallax, ParallaxLayer } from '@react-spring/parallax';
+import { useContext } from "react";
 
-import { useEffect, useState } from "react";
+import { AppContext } from "../../context.jsx";
 
-import MaterialIcon from '../../assets/images/mat-icon.png';
 
 import Header from '../../containers/header/header.container.jsx';
 import CenteredContent from "../../containers/centered-content/centered-content.container.jsx";
@@ -23,23 +22,12 @@ import './home.scss';
 import { scryRenderedComponentsWithType } from "react-dom/test-utils";
 
 const Home = () => {
+  const { isMenuButtonClicked, setMenuButtonCliked } = useContext(AppContext);
 
-  const getWindowInnerWidth = () => {
-    return window.innerWidth;
+
+  const settingUnclicked = () => {
+    setMenuButtonCliked(false);
   }
-
-  const [innerWidth, getInnerWidth] = useState(getWindowInnerWidth());
-
-
-  useEffect(() => {
-    window.addEventListener('resize', () => {
-      let iW = window.innerWidth;
-
-      getInnerWidth(iW)
-    })
-
-  }, [innerWidth])
-
 
   return (
     <div className="home">
@@ -48,9 +36,20 @@ const Home = () => {
       </div>
       <div className="main-content-wrapper">
         <div
-          className="nav-overlay">
+          className="nav-overlay"
+          style={
+            isMenuButtonClicked === true
+              ? { visibility: 'visible' }
+              : { visibility: 'hidden' }
+          }
+          onClick={
+            isMenuButtonClicked === true
+              ? () => { settingUnclicked() }
+              : () => { settingUnclicked() }
+          }
+        >
         </div>
-        <PopupNavigation innerWidth={innerWidth} />
+        <PopupNavigation />
         <CenteredContent />
         <div className="pre-content">
           <header>

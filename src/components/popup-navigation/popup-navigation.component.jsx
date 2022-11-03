@@ -1,3 +1,6 @@
+import { useContext } from "react";
+
+import { AppContext } from "../../context";
 import LinksSection from "../links-section/links-section.component";
 
 import { ReactComponent as Git } from '../../assets/images/git.svg';
@@ -8,10 +11,20 @@ import { ReactComponent as GitRepo } from '../../assets/images/git-repo.svg';
 import MaterialIcon from '../../assets/images/mat-icon.png';
 
 import './popup-navigation.style.scss';
+import App from "../../App";
 
-const PopupNavigation = ({ innerWidth }) => {
+const PopupNavigation = () => {
+  const { isMenuButtonClicked } = useContext(AppContext);
+
   return (
-    <nav className="ham-menu__nav">
+    <nav
+      className="ham-menu__nav"
+      style={
+        isMenuButtonClicked === true
+          ? { transform: 'translateX(0px)' }
+          : { transform: 'translateX(-250px)' }
+      }
+    >
       <label className="ham-menu__nav__title">
         <div className="ham-menu__nav__logo">
           <div className="ham-menu__nav__logo__element">
@@ -68,7 +81,9 @@ const PopupNavigation = ({ innerWidth }) => {
           </div>
         </div>
       </label>
-      <ul className="nav-ul">
+      <ul
+        className="nav-ul"
+      >
         <li className="nav-ul__link nav-ul__li">
           <span>Home</span>
         </li>

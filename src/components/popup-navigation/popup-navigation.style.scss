@@ -10,11 +10,12 @@
   scroll-snap-type: none;
   top: 0;
   background-color: white;
-  height: 100vh;
+  height: 100%;
   scroll-snap-type: none;
   width: 250px;
   z-index: 5;
   transform: translateX(-250px);
+  transition: $base-animation;
 
   &__logo {
     background-color: #3e51bb;

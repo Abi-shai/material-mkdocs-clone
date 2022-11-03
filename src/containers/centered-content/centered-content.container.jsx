@@ -1,7 +1,3 @@
-// import { useRef, useEffect, useState } from "react";
-// import gsap from "gsap";
-// import { ScrollTrigger } from "gsap/ScrollTrigger";
-
 import Navigation from "../../components/navigation/navigation.component";
 
 import './centered-content.style.scss';
