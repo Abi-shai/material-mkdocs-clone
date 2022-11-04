@@ -20,7 +20,6 @@ const CenteredContent = () => {
           </div>
         </div>
       </div>
-      {/* <div className="huge-space"></div> */}
     </section >
   )
 }

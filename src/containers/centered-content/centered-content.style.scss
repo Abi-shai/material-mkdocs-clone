@@ -17,9 +17,7 @@
 
 .doc-section {
   color: white;
-  backface-visibility: hidden;
-  display: grid;
-  grid-template-rows: auto;
+  display: block;
   position: inherit;
 
   &-h1 {
@@ -27,23 +25,25 @@
     color: inherit;
     font-weight: 700;
     letter-spacing: -.01em;
-    font-size: 2em;
+    font-size: 2rem;
     line-height: 1.3;
-    margin: 0 0 1.25em;
     margin-bottom: .7em;
 
     @media screen and (max-width: 900px) {
-      font-size: 1.5em;
+      font-size: 1.5rem;
     }
   }
 
   .catch-phrase-section {
     text-shadow: 0 0 .2rem rgba(33, 29, 45, .8);
     color: #fff;
-    font-size: 16px;
+    font-size: 1rem;
+    width: 400px;
     line-height: 1.6;
-    width: 480px;
-    margin-bottom: 2em;
+
+    @media screen and (min-width: 100px) and (max-width: 600px) {
+      width: 80%;
+    }
 
     &-links {
 
@@ -56,7 +56,6 @@
         font-weight: 700;
         font-size: 16px;
         color: #fff;
-        margin-top: 1.8em;
         border-radius: 3px;
 
         &:hover {
@@ -69,8 +68,8 @@
         background-color: transparent;
         font-weight: 700;
         cursor: pointer;
-        margin-left: 1.2em;
         padding: 1em 2em;
+        text-align: center;
         border-radius: 3px;
 
         &:hover {
@@ -88,4 +87,19 @@
 
 .onWheel-wrapper {
   transition: $base-animation;
+}
+
+.catch-phrase-section-links {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: flex-start;
+  align-content: center;
+  row-gap: 1.5em;
+  column-gap: 1.5em;
+  margin-bottom: 2em;
+
+  @media screen and (max-width: 442px) {
+    grid-auto-flow: row;
+
+  }
 }
