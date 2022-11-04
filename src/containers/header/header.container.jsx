@@ -16,7 +16,7 @@ const Header = () => {
       className="headeer-wrapper"
       style={
         isMenuButtonClicked === true
-          ? { position: 'initial' }
+          ? { position: '' }
           : { position: 'fixed' }
       }
     >

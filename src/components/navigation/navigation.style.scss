@@ -4,7 +4,7 @@
   margin-top: 1.3em;
 
   @media screen and (max-width: 900px) {
-    display: none;
+    visibility: hidden;
   }
 
   .list-wrapper {

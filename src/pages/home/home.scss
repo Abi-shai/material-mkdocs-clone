@@ -1,10 +1,44 @@
 @import '../../App.scss';
 
 .home {
-  background-image: url('../../assets/images/main-image.svg');
+  // background-image: url('../../assets/images/main-image.svg');
   background-repeat: no-repeat;
   background-size: contain;
   position: relative;
+
+  @media screen and (min-width: 750px) and (max-width: 810px) {
+    background-size: 190%;
+    background-position-x: center;
+    background-position-y: 50px;
+  }
+
+  @media screen and (min-width: 620px) and (max-width: 749px) {
+    background-size: 230%;
+    background-position-x: center;
+    background-position-y: 50px;
+  }
+}
+
+.viewport__100 {
+  height: 100vh;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  background-image: url('../../assets/images/main-image.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 130%;
+
+  // .img__main {
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   right: 0;
+  //   bottom: 0;
+  //   width: 100%;
+  //   height: 100%;
+  //   z-index: -1;
+  // }
 }
 
 .hd-wrapper {
