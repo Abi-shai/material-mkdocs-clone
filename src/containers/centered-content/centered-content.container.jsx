@@ -11,7 +11,7 @@ const CenteredContent = () => {
       <div className="doc-section">
         <h1 className="doc-section-h1">Documentation that simply works</h1>
         <div className="catch-phrase-section">
-          <p>
+          <p className="catch-phrase-section__p">
             Write your documentation in Markdown and create a professionnal static site in minutes - searchable, customizable, for all devices.
           </p>
           <div className="catch-phrase-section-links">

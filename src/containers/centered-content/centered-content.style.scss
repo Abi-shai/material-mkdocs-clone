@@ -30,7 +30,7 @@
     margin-bottom: .7em;
 
     @media screen and (max-width: 900px) {
-      font-size: 1.5rem;
+      font-size: 1.8rem;
     }
   }
 
@@ -38,12 +38,16 @@
     text-shadow: 0 0 .2rem rgba(33, 29, 45, .8);
     color: #fff;
     font-size: 1em;
-    width: 518px;
     line-height: 1.6;
 
-    @media screen and (min-width: 100px) and (max-width: 600px) {
-      width: 90%;
+    &__p {
+      width: 518px;
+
+      @media screen and (min-width: 100px) and (max-width: 600px) {
+        width: 90%;
+      }
     }
+
 
     &-links {
 
@@ -109,7 +113,7 @@
   margin-bottom: 2em;
   // font-size: 12px;
 
-  @media screen and (max-width: 424px) {
+  @media screen and (max-width: 378px) {
     grid-auto-flow: row;
   }
 }
