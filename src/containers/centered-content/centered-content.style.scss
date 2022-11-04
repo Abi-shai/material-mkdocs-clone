@@ -37,12 +37,12 @@
   .catch-phrase-section {
     text-shadow: 0 0 .2rem rgba(33, 29, 45, .8);
     color: #fff;
-    font-size: 1rem;
-    width: 400px;
+    font-size: 1em;
+    width: 518px;
     line-height: 1.6;
 
     @media screen and (min-width: 100px) and (max-width: 600px) {
-      width: 80%;
+      width: 90%;
     }
 
     &-links {
@@ -58,6 +58,11 @@
         color: #fff;
         border-radius: 3px;
 
+        @media screen and (max-width: 300px) {
+          padding: .5em 1em;
+        }
+
+
         &:hover {
           background-color: #526cfe;
           transition: color 125ms, background-color 125ms, border-color 125ms;
@@ -71,6 +76,10 @@
         padding: 1em 2em;
         text-align: center;
         border-radius: 3px;
+
+        @media screen and (max-width: 300px) {
+          padding: .5em 1em;
+        }
 
         &:hover {
           background-color: #526cfe;
@@ -96,10 +105,11 @@
   align-content: center;
   row-gap: 1.5em;
   column-gap: 1.5em;
+  margin-top: 1em;
   margin-bottom: 2em;
+  // font-size: 12px;
 
-  @media screen and (max-width: 442px) {
+  @media screen and (max-width: 424px) {
     grid-auto-flow: row;
-
   }
 }
