@@ -3,6 +3,7 @@
 .maticon-wrapper {
   transition: $second-animation;
   opacity: 1;
+  cursor: pointer;
 
   &:hover {
     opacity: .7;
@@ -34,9 +35,9 @@
   font-size: 18px;
   gap: 1em;
   transform: translateY(3px);
+  position: relative;
   white-space: nowrap;
   text-overflow: ellipsis;
-  overflow: hidden;
 
   @media screen and (min-width: 376px) and (max-width: 900px) {
     transform: translateY(6px);
@@ -60,7 +61,7 @@
   .material-text {
     text-align: center;
     height: 20px;
-    font-weight: 600;
+    font-weight: 700;
     color: $md-primary-color;
   }
 
@@ -91,7 +92,7 @@
 .icon-image {
   fill: white;
   display: none;
-  transform: translateY(2px);
+  transform: translateY(1px);
   height: 35px;
   width: 35px;
   cursor: pointer;
@@ -102,6 +103,8 @@
 }
 
 .icon-image-1 {
+  transform: translateY(2px);
+
   @media screen and (max-width: 900px) {
     display: none;
   }
