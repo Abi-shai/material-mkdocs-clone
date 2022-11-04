@@ -32,15 +32,28 @@
   text-align: center;
   justify-items: flex-start;
   font-size: 18px;
-  // position: relative;
   gap: 1em;
   transform: translateY(3px);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 
-  @media screen and (max-width: 900px) {
+  @media screen and (min-width: 376px) and (max-width: 900px) {
     transform: translateY(6px);
 
     .material-text {
       text-overflow: ellipsis;
+      overflow: hidden;
+    }
+  }
+
+  @media screen and (max-width: 375px) {
+    transform: translateY(6px);
+
+    .material-text {
+      text-overflow: ellipsis;
+      overflow: hidden;
+      width: 80%;
     }
   }
 

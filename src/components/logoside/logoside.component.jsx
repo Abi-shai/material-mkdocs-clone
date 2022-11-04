@@ -18,7 +18,7 @@ const LogoSide = () => {
   }
 
   return (
-    <div>
+    <div className="ham-ham-menu">
       <div className="ham-menu">
         <a className="maticon-wrapper">
           <img
@@ -40,7 +40,6 @@ const LogoSide = () => {
         <div className="info-popup-wrapper">
           <p className="info-popup-text">Material for MkDocs</p>
         </div>
-
       </div>
     </div>
   )
