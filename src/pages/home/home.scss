@@ -100,10 +100,21 @@
     color: grey;
     font-weight: lighter;
 
+    &:hover {
+      .headerlink {
+        opacity: 1;
+      }
+    }
+
     .headerlink {
-      text-decoration: none;
-      padding-left: .5em;
-      cursor: pointer;
+      color: grey;
+      margin-left: .3em;
+      opacity: 0;
+      transition: all .75s cubic-bezier(.075, .85, .175, 1), opacity .75s;
+
+      &:hover {
+        color: $md-accent-color-hovered;
+      }
     }
   }
 }
@@ -367,8 +378,6 @@
 
 .trusted-wrapper-3 {
   margin-bottom: 0;
-  width: 85%;
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: 2em;
@@ -723,4 +732,8 @@ hr {
       color: $md-accent-color-hovered;
     }
   }
+}
+
+.strong {
+  color: $md-accent-color-hovered;
 }

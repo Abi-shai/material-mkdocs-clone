@@ -255,7 +255,7 @@ const Home = () => {
           <div className="trusted-wrapper-3">
             <h2 className="md-typeset-2">Become a sponsor</h2>
             <div className="mdx-trust-2">
-              <p> By joining the <a href="insiders/">Insiders</a> program, you'll get immediate access to the latest features while also helping support the ongoing development of Material for MkDocs. Thanks to our <a href="insiders/#how-to-become-a-sponsor">awesome sponsors</a>, this project is actively maintained and kept in good shape. </p>
+              <p> By joining the <a className="strong" href="insiders/">Insiders</a> program, you'll get immediate access to the latest features while also helping support the ongoing development of Material for MkDocs. Thanks to our <a className="strong" href="insiders/#how-to-become-a-sponsor">awesome sponsors</a>, this project is actively maintained and kept in good shape. </p>
               <p className="mdx-trust-2-p"> <strong> Together, we can build documentation that simply works! </strong> </p>
             </div>
             <button className="catch-phrase-section-button-2">Get started</button>
