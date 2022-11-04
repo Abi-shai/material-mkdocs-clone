@@ -211,7 +211,7 @@ const Home = () => {
       <section className="trusted-wrapper">
         <img src={Wall} alt="Trusted in the industry" />
         <div className="trusted-wrapper-2">
-          <h2 className="md-typeset-2">Trusted in the industry</h2>
+          <h2 className="md-typeset-2">Trusted in the industry <a href="#more-than-just-a-static-site" className="headerlink" title="Permanent link"> ¶ </a></h2>
           <div className="mdx-trust">
             <h3>
               Industry leaders, as well as many successful Open Source projects, rely on Material for MkDocs to create professional and beautiful documentation –
