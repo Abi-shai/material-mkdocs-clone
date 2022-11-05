@@ -679,8 +679,17 @@ hr {
 .md-footer-meta__inner {
   display: flex;
   justify-content: space-between;
+  flex-direction: row;
   padding-top: .5em;
   padding-bottom: .5em;
+
+  @media screen and (max-width: 420px) {
+    flex-direction: column;
+  }
+
+  .md-social {
+    align-self: flex-start;
+  }
 }
 
 .md-copyright {
@@ -703,6 +712,11 @@ hr {
   grid-template-columns: repeat(5, 1fr);
   gap: 20px;
   align-self: center;
+  flex-shrink: 1;
+
+  @media screen and (max-width: 800px) {
+    gap: 10px;
+  }
 }
 
 .md-social__link {
