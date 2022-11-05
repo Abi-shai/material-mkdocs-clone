@@ -20,6 +20,8 @@
 
   &__logo {
     background-color: #3e51bb;
+    display: grid;
+    grid-template-rows: 2.5fr 1fr;
 
     &__element {
       width: 80%;
@@ -30,7 +32,7 @@
       font-weight: 700;
 
       & p {
-        padding-top: .5em;
+        padding-top: 1em;
       }
     }
   }
@@ -47,11 +49,10 @@
   row-gap: 5px;
   font-size: 13px;
   text-align: left;
-  height: fit-content;
+  height: max-content;
 }
 
 .links-wrapper-4 {
-  position: relative;
   transition: $base-animation;
   background-color: $md-accent-color-hovered;
 
@@ -85,12 +86,6 @@
   }
 }
 
-
-.git {
-  height: 100%;
-  width: 20px;
-  transform: translateY(10px);
-}
 
 .links-icons {
   width: calc(100% - 1em);
@@ -184,5 +179,13 @@
     transform: translateX(-8px);
     width: 24px;
     height: 24px;
+  }
+}
+
+.links {
+  @-moz-document url-prefix() {
+    span {
+      height: max-content;
+    }
   }
 }

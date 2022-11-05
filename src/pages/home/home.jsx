@@ -18,6 +18,7 @@ import SebastianRamirez from "../../assets/images/sebastian-ramirez.jpg";
 import MichaelFeng from "../../assets/images/michael-feng.jpg";
 
 import { ReactComponent as MainImage } from '../../assets/images/main-image.svg';
+// import { ReactComponent as Plants } from '../../assets/images/plants.svg';
 
 
 import './home.scss';
@@ -43,7 +44,7 @@ const Home = () => {
         <div className="hd-wrapper">
           <Header />
         </div>
-        {/* <MainImage className="img__main" /> */}
+        <MainImage className="img__main" />
         <CenteredContent />
       </div>
       <PopupNavigation />

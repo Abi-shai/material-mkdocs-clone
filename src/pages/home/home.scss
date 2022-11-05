@@ -49,22 +49,23 @@
   display: flex;
   justify-content: flex-end;
   flex-direction: column;
-  background-image: url('../../assets/images/main-image.svg');
+  // background-image: url('../../assets/images/main-image.svg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: 130%;
   background-position-y: center;
 
-  // .img__main {
-  //   position: absolute;
-  //   top: 0;
-  //   left: 0;
-  //   right: 0;
-  //   bottom: 0;
-  //   width: 100%;
-  //   height: 100%;
-  //   z-index: -1;
-  // }
+  .img__main {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    transform: translateX(10px);
+    opacity: .8;
+    width: 100%;
+  }
 }
 
 .hd-wrapper {
