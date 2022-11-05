@@ -19,6 +19,7 @@
   color: white;
   display: block;
   position: inherit;
+  z-index: 2;
 
   &-h1 {
     text-shadow: 0 0 .2rem rgba(33, 29, 45, .8);

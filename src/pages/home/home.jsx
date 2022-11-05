@@ -44,23 +44,25 @@ const Home = () => {
         <div className="hd-wrapper">
           <Header />
         </div>
-        <MainImage className="img__main" />
-        <CenteredContent />
-      </div>
-      <PopupNavigation />
-      <div className="main-content-wrapper">
-        <div
-          className="nav-overlay"
+        <MainImage
+          className="img__main"
           style={
             isMenuButtonClicked === true
-              ? { visibility: 'visible' }
-              : { visibility: 'hidden' }
+              ? { opacity: .3 }
+              : { opacity: .7 }
           }
           onClick={
             isMenuButtonClicked === true
               ? () => { settingUnclicked() }
               : () => { settingUnclicked() }
           }
+        />
+        <CenteredContent />
+      </div>
+      <PopupNavigation />
+      <div className="main-content-wrapper">
+        <div
+          className="nav-overlay"
         >
         </div>
       </div>
