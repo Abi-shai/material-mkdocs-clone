@@ -80,11 +80,11 @@ const Home = () => {
     return () => {
       ctx.revert();
 
-      gsap.to(mainImage.current, {
-        opacity: .8,
-        duration: 3.5,
-        ease: "power2.out",
-      })
+      // gsap.from(mainImage.current, {
+      //   opacity: 0,
+      //   duration: 3.5,
+      //   ease: "power2.out",
+      // })
     } // cleanup
 
   }, []);
@@ -113,7 +113,7 @@ const Home = () => {
           style={
             isMenuButtonClicked === true
               ? { opacity: .3 }
-              : { opacity: 0 }
+              : { opacity: .7 }
           }
           onClick={
             isMenuButtonClicked === true
