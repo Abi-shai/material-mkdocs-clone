@@ -183,9 +183,15 @@
 }
 
 .links {
+  span {
+    height: .001px;
+  }
+}
+
+.links {
   @-moz-document url-prefix() {
     span {
-      height: max-content;
+      height: auto;
     }
   }
 }
