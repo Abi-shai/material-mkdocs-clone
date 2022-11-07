@@ -35,6 +35,7 @@ const Home = () => {
   const eYWE = useRef();
   const expertiseRef = useRef();
   const trustedRef = useRef();
+  const usersRef = useRef();
 
   gsap.registerPlugin(ScrollTrigger);
 
@@ -125,7 +126,18 @@ const Home = () => {
       });
     }, trustedRef);
 
-    return () => (ctx.revert(), ctx2.revert(), ctx3.revert(), ctx4.revert(), ctx5.revert())
+    let ctx6 = gsap.context(() => {
+      gsap.from('.scale__transition', {
+        scrollTrigger: ".scale__transition",
+        opacity: 0,
+        scale: .5,
+        duration: .1,
+        ease: "power2.out",
+      });
+    }, usersRef);
+
+
+    return () => (ctx.revert(), ctx2.revert(), ctx3.revert(), ctx4.revert(), ctx5.revert(), ctx6.revert())
 
   }, []);
 
@@ -332,9 +344,9 @@ const Home = () => {
           <header className="md-typeset">
             <h1 id="what-our-users-say"> What our users say <a href="#what-our-users-say" className="headerlink" title="Permanent link"> ¶ </a> </h1>
           </header>
-          <div className="mdx-users">
+          <div ref={usersRef} className="mdx-users">
             <figure className="mdx-users__testimonial">
-              <img src={JohnMaeda} alt="John Maeda" loading="lazy" width="200" height="200" />
+              <img className="scale__transition" src={JohnMaeda} alt="John Maeda" loading="lazy" width="200" height="200" />
               <figcaption className="md-typeset">
                 <h2>John Maeda</h2>
                 <h3> Author / <a href="https://howtospeakmachine.com/">How To Speak Machine</a> </h3>
@@ -342,14 +354,14 @@ const Home = () => {
               </figcaption>
             </figure>
             <figure className="mdx-users__testimonial">
-              <img src={SebastianRamirez} alt="John Maeda" loading="lazy" width="200" height="200" />
+              <img className="scale__transition" src={SebastianRamirez} alt="John Maeda" loading="lazy" width="200" height="200" />
               <figcaption className="md-typeset">
                 <h2>Sebastián Ramírez</h2><h3> Creator of <a href="https://fastapi.tiangolo.com/">FastAPI</a>, <a href="https://typer.tiangolo.com/">Typer</a> &amp; <a href="https://sqlmodel.tiangolo.com/">SQLModel</a> </h3>
                 <cite> The unwritten rule of the digital transformation handbook is that you'll never have the resources to design experiences like Apple. But you can always close most usability gaps with an awesome documentation experience. Expressed similarly in <a href="https://mitpress.mit.edu/books/laws-simplicity">The Laws of Simplicity</a>, "Learning makes things simpler". Material for MkDocs is the magical, extensible, Open Source tool that makes sharing knowledge both easier and beautiful for both the writers and learners. </cite>
               </figcaption>
             </figure>
             <figure className="mdx-users__testimonial">
-              <img src={MichaelFeng} alt="John Maeda" loading="lazy" width="200" height="200" />
+              <img className="scale__transition" src={MichaelFeng} alt="John Maeda" loading="lazy" width="200" height="200" />
               <figcaption className="md-typeset">
                 <h2>Michael Feng</h2><h3> Co-Founder &amp; CEO of <a href="https://hummingbot.com">Hummingbot</a> </h3><cite> Hummingbot Foundation depends on Material for MkDocs for our official website and documentation at <a href="https://hummingbot.org">hummingbot.org</a>. We find it ideal for a complex documentation site because of the flexible navigation and layout options and built-in search. </cite>
               </figcaption>
