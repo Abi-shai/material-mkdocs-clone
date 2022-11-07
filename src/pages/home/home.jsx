@@ -78,17 +78,17 @@ const Home = () => {
       // ScrollTrigger.create({ trigger: ".mdx-expect__item", });
 
     }, topAnim); // <- IMPORTANT! Scopes selector text
-    return () => {
-      ctx.revert();
 
-      gsap.to(eYWE.current, {
+    let ctx2 = gsap.context(() => {
+      gsap.to('.everything-you-would-expect', {
         scrollTrigger: ".everything-you-would-expect",
         opacity: 1,
         duration: 1,
         ease: "power2.out",
         delay: .3
       });
-    } // cleanup
+    }, eYWE);
+    return () => { ctx.revert(), ctx2.revert() }
 
   }, []);
 
@@ -134,8 +134,8 @@ const Home = () => {
         </div>
       </div>
       <div className="pre-content">
-        <header>
-          <h1 ref={eYWE} className="everything-you-would-expect">
+        <header ref={eYWE}>
+          <h1 className="everything-you-would-expect">
             Everything you would expect
             <a href="#everything-you-would-expect" className="headerlink" title="Permanent link">
               ¶
