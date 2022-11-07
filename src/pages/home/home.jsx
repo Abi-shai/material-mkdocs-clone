@@ -97,6 +97,7 @@ const Home = () => {
         scrollTrigger: ".expertise__transition_1",
         x: -25,
         duration: .1,
+        opacity: 0,
         ease: "power2.out",
       });
     }, expertiseRef);
@@ -107,6 +108,7 @@ const Home = () => {
         scrollTrigger: ".expertise__transition-2",
         y: 20,
         duration: 1,
+        opacity: 0,
         ease: "power2.out",
         delay: .3
       });
