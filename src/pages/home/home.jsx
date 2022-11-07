@@ -33,6 +33,8 @@ const Home = () => {
   const topAnim = useRef();
   const mainImage = useRef();
   const eYWE = useRef();
+  const expertiseRef = useRef();
+  const trustedRef = useRef();
 
   gsap.registerPlugin(ScrollTrigger);
 
@@ -88,7 +90,40 @@ const Home = () => {
         delay: .3
       });
     }, eYWE);
-    return () => (ctx.revert(), ctx2.revert())
+
+
+    let ctx3 = gsap.context(() => {
+      gsap.from('.expertise__transition_1', {
+        scrollTrigger: ".expertise__transition_1",
+        x: -25,
+        duration: .1,
+        ease: "power2.out",
+      });
+    }, expertiseRef);
+
+
+    let ctx4 = gsap.context(() => {
+      gsap.from('.expertise__transition-2', {
+        scrollTrigger: ".expertise__transition-2",
+        y: 20,
+        duration: 1,
+        ease: "power2.out",
+        delay: .3
+      });
+    }, expertiseRef);
+
+
+    let ctx5 = gsap.context(() => {
+      gsap.from('.mdx-trust', {
+        scrollTrigger: ".mdx-trust",
+        opacity: 0,
+        y: 20,
+        duration: .1,
+        ease: "power2.out",
+      });
+    }, trustedRef);
+
+    return () => (ctx.revert(), ctx2.revert(), ctx3.revert(), ctx4.revert(), ctx5.revert())
 
   }, []);
 
@@ -218,11 +253,11 @@ const Home = () => {
       <div className="md-content__inner">
         <div className="md-content__inner-2">
           <h1 id="more-than-just-a-static-site">More than just a static site <a href="#more-than-just-a-static-site" className="headerlink" title="Permanent link"> ¶ </a> </h1>
-          <div className="figures-wrapper">
+          <div ref={expertiseRef} className="figures-wrapper">
             <figure className="mdx-spotlight__feature">
-              <a href="setup/setting-up-site-search/" tabIndex="-1" title="Built-in search"> <img src={BuiltInSearch} alt="Built-in search" loading="lazy" width="500" height="327" />
+              <a href="setup/setting-up-site-search/" tabIndex="-1" title="Built-in search"> <img className="expertise__transition-2" src={BuiltInSearch} alt="Built-in search" loading="lazy" width="500" height="327" />
               </a>
-              <figcaption className="md-typeset">
+              <figcaption className="md-typeset expertise__transition_1">
                 <h2 className="built-in-search-h2">Built-in search</h2>
                 <div className="two-ps">
                   <p> Material for MkDocs makes your documentation <strong>instantly searchable</strong> with zero effort: say goodbye to costly third-party crawler-based solutions that can take hours to update. Ship your documentation with a <strong>highly customizable </strong> and <strong>blazing fast search</strong> running entirely <strong>in the user's browser</strong> at no extra cost. </p>
@@ -234,9 +269,9 @@ const Home = () => {
               </figcaption>
             </figure>
             <figure className="mdx-spotlight__feature_2">
-              <a href="setup/setting-up-site-search/" tabIndex="-1" title="Built-in search"> <img src={CodeAnnotations} alt="Built-in search" loading="lazy" width="500" height="327" />
+              <a href="setup/setting-up-site-search/" tabIndex="-1" title="Built-in search"> <img className="expertise__transition-2" src={CodeAnnotations} alt="Built-in search" loading="lazy" width="500" height="327" />
               </a>
-              <figcaption className="md-typeset">
+              <figcaption className="md-typeset expertise__transition_1">
                 <h2 className="built-in-search-h2">Code annotations</h2>
                 <div className="two-ps">
                   <p> Some examples need more explanation than others, which is why Material for MkDocs offers a <strong>unique and elegant</strong> way to add <strong>rich text</strong> almost <strong>anywhere in a code block</strong>. </p>
@@ -248,9 +283,9 @@ const Home = () => {
               </figcaption>
             </figure>
             <figure className="mdx-spotlight__feature">
-              <a href="setup/setting-up-site-search/" tabIndex="-1" title="Built-in search"> <img src={SocialsCard} alt="Built-in search" loading="lazy" width="500" height="327" />
+              <a href="setup/setting-up-site-search/" tabIndex="-1" title="Built-in search"> <img className="expertise__transition-2" src={SocialsCard} alt="Built-in search" loading="lazy" width="500" height="327" />
               </a>
-              <figcaption className="md-typeset">
+              <figcaption className="md-typeset expertise__transition_1">
                 <h2 className="built-in-search-h2">Social cards</h2>
                 <div className="two-ps">
                   <p> <strong>Make an impact on social media</strong> and <strong>increase engagement</strong> when sharing links to your documentation by leveraging the built-in social plugin. Material for MkDocs makes it effortless to generate a <strong>beautiful preview image</strong> for each page, which will drive more interested users to your Open Source or commercial project. </p>
@@ -262,9 +297,9 @@ const Home = () => {
               </figcaption>
             </figure>
             <figure className="mdx-spotlight__feature_2">
-              <a href="setup/setting-up-site-search/" tabIndex="-1" title="Built-in search"> <img src={IconsEmojis} alt="Built-in search" loading="lazy" width="500" height="327" />
+              <a href="setup/setting-up-site-search/" tabIndex="-1" title="Built-in search"> <img className="expertise__transition-2" src={IconsEmojis} alt="Built-in search" loading="lazy" width="500" height="327" />
               </a>
-              <figcaption className="md-typeset">
+              <figcaption className="md-typeset expertise__transition_1">
                 <h2 className="built-in-search-h2"> 10,000+ icons and emojis <img className="twemoji t2 " src="https://twemoji.maxcdn.com/v/latest/svg/1f389.svg" alt="Tada"></img></h2>
                 <div className="two-ps">
                   <p> Supercharge your technical writing by making better use of the processing power of the visual cortex: Material for MkDocs ships <strong>more than 10,000 icons and emojis</strong>, which can be used <strong>in Markdown and HTML</strong> with simple shortcodes and an easy-to-remember syntax. Add color to icons and animate them. <strong>Make it pop.</strong> </p>
@@ -280,7 +315,7 @@ const Home = () => {
       </div>
       <section className="trusted-wrapper">
         <img src={Wall} alt="Trusted in the industry" />
-        <div className="trusted-wrapper-2">
+        <div ref={trustedRef} className="trusted-wrapper-2">
           <h2 className="md-typeset-2">Trusted in the industry <a href="#more-than-just-a-static-site" className="headerlink" title="Permanent link"> ¶ </a></h2>
           <div className="mdx-trust">
             <h3>
