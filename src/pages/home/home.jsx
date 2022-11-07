@@ -32,6 +32,7 @@ const Home = () => {
 
   const topAnim = useRef();
   const mainImage = useRef();
+  const eYWE = useRef();
 
   gsap.registerPlugin(ScrollTrigger);
 
@@ -80,11 +81,13 @@ const Home = () => {
     return () => {
       ctx.revert();
 
-      // gsap.from(mainImage.current, {
-      //   opacity: 0,
-      //   duration: 3.5,
-      //   ease: "power2.out",
-      // })
+      gsap.to(eYWE.current, {
+        scrollTrigger: ".everything-you-would-expect",
+        opacity: 1,
+        duration: 1,
+        ease: "power2.out",
+        delay: .3
+      });
     } // cleanup
 
   }, []);
@@ -132,7 +135,7 @@ const Home = () => {
       </div>
       <div className="pre-content">
         <header>
-          <h1 className="everything-you-would-expect">
+          <h1 ref={eYWE} className="everything-you-would-expect">
             Everything you would expect
             <a href="#everything-you-would-expect" className="headerlink" title="Permanent link">
               ¶
