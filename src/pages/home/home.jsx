@@ -1,4 +1,4 @@
-import { useContext, useRef, useLayoutEffect, useEffect } from "react";
+import { useContext, useRef, useLayoutEffect } from "react";
 
 import { gsap } from "gsap";
 
