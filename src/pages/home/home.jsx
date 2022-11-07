@@ -1,4 +1,4 @@
-import { useContext, useRef, useLayoutEffect } from "react";
+import { useContext, useRef, useEffect } from "react";
 
 import { gsap } from "gsap";
 
@@ -37,7 +37,7 @@ const Home = () => {
   gsap.registerPlugin(ScrollTrigger);
 
 
-  useLayoutEffect(() => {
+  useEffect(() => {
 
     // create our context. This function is invoked immediately and all GSAP animations and ScrollTriggers created during the execution of this function get recorded so we can revert() them later (cleanup)
     let ctx = gsap.context(() => {
@@ -88,7 +88,7 @@ const Home = () => {
         delay: .3
       });
     }, eYWE);
-    return () => { ctx.revert(), ctx2.revert() }
+    return () => (ctx.revert(), ctx2.revert())
 
   }, []);
 
