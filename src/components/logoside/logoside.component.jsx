@@ -22,13 +22,14 @@ const LogoSide = () => {
       <div className="ham-menu">
         <a
           className="maticon-wrapper"
-          href="/"
         >
-          <img
-            className="icon-24 maticon icon-image-1"
-            src={MaterialIcon}
-            alt="MkDocs Material Icon"
-          />
+          <a href="/">
+            <img
+              className="icon-24 maticon icon-image-1"
+              src={MaterialIcon}
+              alt="MkDocs Material Icon"
+            />
+          </a>
           <div
             onClick={
               isMenuButtonClicked === false
