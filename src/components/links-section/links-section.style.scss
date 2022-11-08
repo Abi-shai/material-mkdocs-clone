@@ -1,12 +1,17 @@
 @import '../../App.scss';
 
 .links {
-  display: grid;
-  grid-template-rows: 95% 5%;
-  row-gap: 5px;
+  // // display: grid;
+  // // grid-template-rows: 95% 5%;
+  // font-size: 13px;
+  // text-align: left;
+  // height: fit-content;
   font-size: 13px;
-  text-align: left;
-  height: fit-content;
+  row-gap: 15px;
+
+  p {
+    height: max-content;
+  }
 }
 
 .links-wrapper {
