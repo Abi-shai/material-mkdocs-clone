@@ -22,7 +22,6 @@ export const AppProvider = ({ children }) => {
 
       getInnerWidth(iW)
     })
-
   }, [innerWidth])
 
   const value = {

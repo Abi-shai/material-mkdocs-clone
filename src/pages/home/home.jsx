@@ -130,14 +130,13 @@ const Home = () => {
       gsap.from('.scale__transition', {
         scrollTrigger: ".scale__transition",
         opacity: 0,
-        scale: .5,
-        duration: .1,
+        scale: .2,
+        duration: .5,
         ease: "power2.out",
       });
     }, usersRef);
 
-
-    return () => (ctx.revert(), ctx2.revert(), ctx3.revert(), ctx4.revert(), ctx5.revert(), ctx6.revert())
+    return () => (ctx.revert(), ctx2.revert(), ctx3.revert(), ctx4.revert(), ctx5.revert(), ctx6.revert(), gsap.from(mainImage.current, { scale: .3, ease: "power4.out", duration: .6 }))
 
   }, []);
 
