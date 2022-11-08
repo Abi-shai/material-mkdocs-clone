@@ -42,7 +42,10 @@ const PopupNavigation = () => {
               >
                 <Git className="git" fill="white" />
 
-                <div className="links">
+                <a
+                  className="links"
+                  href="https://github.com/squidfunk/mkdocs-material"
+                >
                   <span> squidfunk /mkdocs-material</span>
 
                   <div className="links-icons-wrapper">
@@ -72,7 +75,7 @@ const PopupNavigation = () => {
 
                   </div>
 
-                </div>
+                </a>
               </div>
             </div>
           </div>

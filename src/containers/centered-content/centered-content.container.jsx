@@ -16,7 +16,7 @@ const CenteredContent = () => {
           </p>
           <div className="catch-phrase-section-links">
             <button className="catch-phrase-section-button">Get started</button>
-            <span>Learn more</span>
+            <a href="#everything-you-would-expect">Learn more</a>
           </div>
         </div>
       </div>

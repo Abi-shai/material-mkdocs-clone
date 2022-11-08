@@ -20,11 +20,14 @@ const LogoSide = () => {
   return (
     <div className="ham-ham-menu">
       <div className="ham-menu">
-        <a className="maticon-wrapper">
+        <a
+          className="maticon-wrapper"
+          href="/"
+        >
           <img
             className="icon-24 maticon icon-image-1"
             src={MaterialIcon}
-            alt="menu"
+            alt="MkDocs Material Icon"
           />
           <div
             onClick={

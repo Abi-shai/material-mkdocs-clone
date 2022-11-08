@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 import { ReactComponent as Git } from '../../assets/images/git.svg';
 import { ReactComponent as Star } from '../../assets/images/star.svg';
@@ -36,7 +37,10 @@ const LinksSection = () => {
       >
         <Git className="git" fill="white" />
 
-        <div className="links">
+        <a
+          className="links"
+          href="https://github.com/squidfunk/mkdocs-material"
+        >
           <p> squidfunk /mkdocs-material</p>
 
           <div className="links-icons-wrapper">
@@ -66,7 +70,7 @@ const LinksSection = () => {
 
           </div>
 
-        </div>
+        </a>
       </div>
 
       <div className="info-popup-wrapper">

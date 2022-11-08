@@ -8,6 +8,9 @@
   // height: fit-content;
   font-size: 13px;
   row-gap: 15px;
+  text-decoration: none;
+  color: white;
+  transition: $base-animation;
 
   p {
     height: max-content;

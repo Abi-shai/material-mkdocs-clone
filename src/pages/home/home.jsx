@@ -182,7 +182,7 @@ const Home = () => {
         >
         </div>
       </div>
-      <div className="pre-content">
+      <div className="pre-content" id="everything-you-would-expect">
         <header ref={eYWE}>
           <h1 className="everything-you-would-expect">
             Everything you would expect
